@@ -25,7 +25,9 @@ I will be using the Bash shell as my commandline utility.
 Write code that can be run by Dr. Koebbe using the commandline in the language that will be used by me this semester.
 
 Here is a link to my code:
-
+main.java:
+https://github.com/nicoleefleming/math5620/tree/master/homework/homework1/5620HW1/src
+If the entire folder is desired, the folder 5620hw1 is the folder to pull down. 
 
 
 ## Task 5
