@@ -93,7 +93,7 @@ This solution matches that which was calculated by hand.
             {
                 xi[i] = xi[i] - (A[i][j] * x);
             }
-            xi[i] = xi[i]/A[i][i];              //Not sure if this line is completely accurate
+            xi[i] = xi[i]/A[i][i];              
         }
 
         return b;
