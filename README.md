@@ -3,5 +3,7 @@ This repository will host all the projects done over the course of Spring 2020 f
 ## Homework Table of Contents
 1. [Homework 1](https://github.com/nicoleefleming/math5620/tree/master/homework/homework1)
 
-2. [Homework 2] ()
+2. [Homework 2](https://github.com/nicoleefleming/math5620/blob/master/homework/homework2/hw2.md)
+
+3. [Homework 3]()
 
