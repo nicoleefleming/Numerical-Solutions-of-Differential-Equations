@@ -66,7 +66,7 @@ verify that the code worked for 'n' equal to sizes bigger than 3.
 
 **Implementation/Code:** The following is the code for triDiagInit
 
-public double[][] triDiagInit(int[] al, int[] ad, int[] as, int n)
+    public double[][] triDiagInit(int[] al, int[] ad, int[] as, int n)
     {
         //assign values based on matrix located on page 16 in the textbook
         for(int i = 0; i < n; i++)
@@ -75,7 +75,6 @@ public double[][] triDiagInit(int[] al, int[] ad, int[] as, int n)
             ad[i] = 2;
             as[i] = 1;
         }
-
         //create matrix that stores al, ad, as
         double[][] tridiag = new double[n][n];
 
