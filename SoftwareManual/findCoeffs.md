@@ -63,8 +63,7 @@ the 1 is in the kth position:
       -0.09259259259259256 
       0.001714677640603568 
 
-The first section of three shows the values found for the original equation, and is printed as expected, matching the work done by hand.
-The work done by hand differs by a few zeros, but the numbers are similar. The second and third are accurate to what was done by hand as well.
+The first section of three shows the values found for the original equation, and is printed as expected, matching the work computed prior to running. As do the second and third. The answers differ by the amount of digits displayed.
 This is for one case, using the above specified values to pass into the function. 
 
 **Implementation/Code:** The following is the code for findCoeffs
