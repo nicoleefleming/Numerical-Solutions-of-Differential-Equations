@@ -7,3 +7,8 @@ This repository will host all the projects done over the course of Spring 2020 f
 
 3. [Homework 3]()
 
+## Software Manual Link
+
+By following the link provided, it will link to the software manual pages written for this course.
+[Software Manual](https://github.com/nicoleefleming/math5620/tree/master/SoftwareManual)
+
