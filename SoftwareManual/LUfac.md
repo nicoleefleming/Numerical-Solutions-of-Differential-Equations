@@ -43,8 +43,7 @@ The routine has two arguments needed to return the values after solving for the 
             System.out.println("\n");
         }
 
-Output from the lines above where k is 2, x is the vector { (1/9), 0, -(1/9) }, xbar is 1, and b is passed in then initialized to the vector { 0,0,1 } where 
-the 1 is in the kth position:
+Output from the method:
 
       128.0, 0.5, 0.0 
 
