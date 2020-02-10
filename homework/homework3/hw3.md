@@ -6,7 +6,7 @@ For the tridiagonal matrix that arises from the central difference applied to th
 u'′=f(x) 
 on [0,1] develop an algorithm that performs the LU decomposition of the coefficient matrix. Also, develop the forward and backward substitution methods to go along with the LU factorization.
 
-###Solution
+### Solution
 To preform the LU decomposition on the elliptic problem, the following code was created.
 
       private double[][] LUfac(double[][] array, double[] b)
@@ -59,7 +59,7 @@ The Software manual page for LUfac, forward and backward are listed below.
 Apply the code from the previous task to the case where f(x)=0 and u(0)=1 and u(1)=3. Use some graphing utility to display your results. Do this for varying numbers of mesh points. Make the coarsest mesh size 
 h=1/8 and refine to h=1/256.
 
-###Response
+### Response
 Due to lack of understanding how to go about actually solving this problem the following code was created, and thought over. 
 The conclusion of this excersise and the following three was that the understanding of what was being done was not there, at least to get
 the answers that were being requested.   
@@ -135,7 +135,7 @@ The Software Manual Page for each of the functions listed above are linked below
 
 Repeat the previous task with $f(x)=10.0\ sin(2\pi x)\) and use homogeneous Dirichlet boundary conditions.
 
-###Response
+### Response
 Due to lack of understanding how to go about actually solving this problem, the conclusion of this excersise and the following three was that the understanding of what was being done was not there, at least to get
 the answers that were being requested. There were 5 whiteboards filled with attempts to solve this problem with pseudocode and handwritten work.
 
@@ -143,7 +143,7 @@ the answers that were being requested. There were 5 whiteboards filled with atte
 
 Repeat the previous two tasks combining f(x) from Task 3 with the boundary conditions given in Task 2.
 
-###Response
+### Response
 Due to lack of understanding how to go about actually solving this problem, the conclusion of this excersise and the following three was that the understanding of what was being done was not there, at least to get
 the answers that were being requested. 
 
@@ -151,7 +151,7 @@ the answers that were being requested.
 
 Create a new code from the elliptic problem with Neumann boundary conditions. Using the same data as in Task 4 test your code using homogeneous Neumann conditions. Also, run a test case for unit fluxes at both ends of the domain.
 
-###Response
+### Response
 Due to lack of understanding how to go about actually solving this problem, the conclusion of this excersise and the following three was that the understanding of what was being done was not there, at least to get
 the answers that were being requested. The confusion for this one arose mainly after getting to a certain point in solving the Dirichlet ba=oundary problems. 
 
