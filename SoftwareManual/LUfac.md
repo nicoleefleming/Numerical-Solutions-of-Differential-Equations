@@ -86,10 +86,7 @@ The first section of three shows the values found for the original equation, and
             }
         }
 
-        forward(A, b);
-        backward(A, b);
-        B = b;
         return A;
     }
 
-**Last Modified:** 10/February/2020
+**Last Modified:** 11/February/2020
