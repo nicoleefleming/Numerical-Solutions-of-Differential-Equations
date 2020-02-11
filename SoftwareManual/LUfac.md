@@ -22,10 +22,10 @@ These commands should also work.
 
 **Description/Purpose:** This routine will solve for the upper and lower triangle of a tridiagonal linear system.
 
-**Input:** There are two inputs: double[][] array, double[] b. The array is the tridiagonal matrix. This method can be used on the coefficients, and the initial matrix. It can also be used to solve for other square matrix LU factorizations.
+**Input:** There are one input: double[][] array. The array is the tridiagonal matrix, but can also be any square matrix. This method can be used on the coefficients, and the initial matrix. 
 
 **Output:** This routine returns a two dimensional array of doubles that can be printed to the screen to verify 
-values. When solving by hand, the same values were found, in their respective fraction forms.
+values. The array returned is both the upper and lower matrices found in the LU factorization process.
 
 **Usage/Example:**
 
@@ -55,18 +55,10 @@ The first section of three shows the values found for the original equation, and
 
 **Implementation/Code:** The following is the code for LUfac
 
-    private double[][] LUfac(double[][] array, double[] b)
+    private double[][] LUfac(double[][] array)
     {
         int n = array.length;
-        int m = b.length;
-
-
-        if(n != m)
-        {
-            System.out.println("The rows of the matrix A do not match the rows in the known solution vector.");
-            return array;
-        }
-
+       
         double[][] A;  //the matrix that is being acted on.
         A = array;                //assign the matrix to that which was passed in to make a copy
         double factor;                 //the factor that the GE calculates
