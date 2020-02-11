@@ -1,4 +1,5 @@
 # Math 5620 Finite Difference Methods for Ordinary and Partial Differential Equations
+This is not a method used in Tasksheet 3
 
 **Routine Name:**           AssignLambda
 
