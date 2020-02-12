@@ -15,8 +15,8 @@ For example,
 
 will produce in running the program in both sources. If one does not have the gradle installed with the project, to run from the commandline
 
-    "FILE-PATH" src/TriDiagOps/*.java -d classes
-    "FILE-PATH" -cp classes TriDiagOps.java
+    "FILE-PATH" src/LinearSolvers/*.java -d classes
+    "FILE-PATH" -cp classes LinearSolvers.java
     
 These commands should also work.
 
