@@ -153,14 +153,24 @@ The Software Manual Page for each of the functions listed above are linked below
 Repeat the previous task with $f(x)=10.0\ sin(2\pi x)\) and use homogeneous Dirichlet boundary conditions. This means u(a)=0, and u(b) = 0.
 
 ### Response
-In the process of completion. . . .    
+In using homogeneous roots, only a few modifictations were made to the code. The main modification being that in the RHSinit method, instead of assigning values of zero, the code was computing the value of f(x) which was an equation. The x in the equation was computed in a for loop in the right hand side to determine the answers. The graphs are shown below. for h = 1/8, and h = 1/256 with ua and ub equal to 0.    
+
+![Graph of f(x) = 10sin(2pix), h = 1/8, ua = 0, ub = 0](https://github.com/nicoleefleming/math5620/blob/master/homework/homework3/10sinhiseighthomo.png)     
+
+![Graph of f(x) = 10sin(2pix), h = 1/256, ua = 0, ub = 0](https://github.com/nicoleefleming/math5620/blob/master/homework/homework3/10sinhis256homo.png)     
+
+
 
 ## Task 4
 
 Repeat the previous two tasks combining f(x) from Task 3 with the boundary conditions given in Task 2.
 
 ### Response
-In the process of completion. . . .     
+In using roots that are unequal to each other, only a few modifictations were made to the code. The main modification being that in the RHSinit method, instead of assigning values of zero, the code was computing the value of f(x) which was an equation. The x in the equation was computed in a for loop in the right hand side to determine the answers. The initial value of the right hand side was also changed since using Dirichlet's conditions, the first and last values are modified. In this cast the modification can be seen. The graphs are shown below. for h = 1/8, and h = 1/256 with ua equal to 1 and ub equal to 3. The size, n, was set to 200.    
+
+![Graph of f(x) = 10sin(2pix), h = 1/8, ua = 1, ub = 3](https://github.com/nicoleefleming/math5620/blob/master/homework/homework3/10sinhis8hetero.png)     
+
+![Graph of f(x) = 10sin(2pix), h = 1/256, ua = 1, ub = 3](https://github.com/nicoleefleming/math5620/blob/master/homework/homework3/10sinhis256hetero.png)       
 
 ## Task 5
 
