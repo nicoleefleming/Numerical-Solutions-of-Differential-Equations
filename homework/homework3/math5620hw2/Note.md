@@ -1,3 +1,4 @@
-Just a note:
+Vvalues, and Xvalues for the first case given in the homework are in the respective files.  
+For the 10*\sin(2*\pi*\i) the files used are X and Y.
 
-The txt file for Vvalues was not included. Look into this.
+For the Neumann Conditions the files used are
