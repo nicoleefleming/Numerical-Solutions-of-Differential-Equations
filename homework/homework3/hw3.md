@@ -138,7 +138,7 @@ To solve for the Right Hand Side the following function was used.
     
     
 The graphs that follow are for n = 200, with h = 1/8 and h = 1/256 for f(x) = 0, ua = 1, and ub = 3
-![Graph of f(x) = 0, h= 1/256](https://github.com/nicoleefleming/math5620/blob/master/homework/homework3/Graphofts3.2nis200x200mis8.png)     h = 1/256 where f(x) = 0, and nxn = 200      
+![Graph of f(x) = 0, h= 1/256](https://github.com/nicoleefleming/math5620/blob/master/homework/homework3/honeeigthwith200.png)     h = 1/256 where f(x) = 0, and nxn = 200      
 
 ![Graph of f(x) = 0, h = 1/8](https://github.com/nicoleefleming/math5620/blob/master/homework/homework3/honeeigthwith200.png)       
 h = 1/8 where f(x) = 0, and nxn = 200      
