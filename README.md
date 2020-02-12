@@ -5,7 +5,9 @@ This repository will host all the projects done over the course of Spring 2020 f
 
 2. [Homework 2](https://github.com/nicoleefleming/math5620/blob/master/homework/homework2/hw2.md)
 
-3. [Homework 3]()
+3. [Homework 3](https://github.com/nicoleefleming/math5620/blob/master/homework/homework3/hw3.md)
+
+4. [Homework 4]()
 
 ## Software Manual Link
 
