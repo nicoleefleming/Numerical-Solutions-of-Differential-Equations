@@ -39,10 +39,7 @@ To preform the LU decomposition on the elliptic problem, the following code was 
                   A[k][i]= factor; //b[i] = b[i] - (factor * b[k]);
                }
           }
-          
-          forward(A, b);
-          backward(A, b);
-          B = b;
+         
           return A;
        }
        
@@ -60,100 +57,110 @@ Apply the code from the previous task to the case where f(x)=0 and u(0)=1 and u(
 h=1/8 and refine to h=1/256.
 
 ### Response
-Due to lack of understanding how to go about actually solving this problem the following code was created, and thought over. 
-The conclusion of this excersise and the following three was that the understanding of what was being done was not there, at least to get
-the answers that were being requested.   
-   
-Here is the code that was created in an attempt to solve the problem.  
+The following code was used to solve the Dirichlet Boundary Value problem. The original misunderstanding was with the substitution methods. I was attempting to put all the methods into one, which was not how it should be, since the substitution aids in solving the system. 
   
-     public double[] DirichletSolve(double[][] A, double[] lambda, double[] b, double b1, double c, int k,  double u0, double u1) throws IOException
-    {
-        File file = new File("Vvalues");
-        FileOutputStream output = new FileOutputStream(file);
+      public double[] DirichletSolve(double[][] array, double[] u, double ua, double ub)
+      {
+        try {
+            //for : with f(x) = 10*sin(2i*pi)
+            BufferedWriter writer = new BufferedWriter(new FileWriter("Y.txt"));
+            BufferedWriter xwriter = new BufferedWriter(new FileWriter("X.txt"));
+            // for 1:3 with f(x) = 0
+      //            BufferedWriter writer = new BufferedWriter(new FileWriter("Vvalues.txt"));
+      //            BufferedWriter xwriter = new BufferedWriter(new FileWriter("Xvalues.txt"));
 
-        //TODO: SOLVE FOR ROOTS
-        double[] r = new double[k];
-        double[] v = new double[A.length];
-        double mew;
-        double gamma;
 
-        for (int i = 0; i < k; i++)
-        {
-            if(k == 2)
-            {
-                //#DO-DO??
-                r[i] = solveRoots(A, lambda, b1, c, i);
 
+            double[] solFor;
+            double[] sol;
+            int len = array.length;
+            double[] fx = new double[len];
+            //initialize Right Hand Side
+            //first case, f(x) = 0;
+            fx = RHSinit(u, ua, ub);
+
+            //second case 10sin(2pix)
+
+
+            //Linear Solve for Lower*y = RHS
+            solFor = forward(array, fx);
+
+            //Linear Solve for Upper*u = y
+            sol = backward(array, solFor);
+
+            //Print out the values to a file of U and f(x)
+            for (int i = 0; i < len; i++) {
+                //write file to Vvalues.txt for all u
+                String writeMe = Double.toString(sol[i]);
+                writer.write(writeMe);
+                writer.write("\n");
+
+                //write to file all x for i
+                String xVal = Double.toString(i);
+                xwriter.write(xVal);
+                xwriter.write("\n");
             }
+
+            writer.close();
+            xwriter.close();
+
+            //TODO: RETURN values of u
+            //return u;
         }
+        catch(IOException io)
+        {
+            System.out.println("IO EXCEPTION CAUGHT \n");
+            io.printStackTrace();
+        }
+        return u;
+    }   
+    
+To solve for the Right Hand Side the following function was used.   
 
-        //TODO: SOLVE FOR CONSTANTS
+      public double[] RHSinit(double[] fx, double ua, double ub)
+      {
+        //init array to what the formula is
+        int n = fx.length;
+        double[] rhs = new double[n];
 
-        //TODO: SOLVE FOR V
+        //function
+        for (int i = 0; i < ub; i++)
+        {
+            rhs[i] = 0.0;
+            //rhs[index] = 10*sin(2*pi*i);
+        }
+        //Dirichlet conditions, f(x0) - ua/h^2
+        rhs[0] = rhs[1] - ua;
+        rhs[n-1] = rhs[n-1] - ub;
 
-        //TODO: ASSIGN V
-
-        //TODO: PUT VALUES OF X AND V FOR 0.01-0.99 INTO A FILE
-        //ASSIGN 0 AND 1 BEFORE THE LOOP
-
-        output.close();
-        //TODO: RETURN V
-        return b;
+        return rhs;
     }
     
-    public double[][] AminusLambda(double[][] a, double[] l)
-    {
-        double[][] minus = a;
-
-        for (int i = 0; i < minus.length; i++)
-        {
-            minus[i][i] -= l[i];
-        }
-
-        return minus;
-    }
-    public double[] AssignLambda(double[][] A, double[] lambda, double h, double b1, double c, double pi)
-    {
-        for (int i = 0; i < A.length; i++)
-        {
-            lambda[i] = A[i][i] - (2*b1)*sqrt(c/b1)*cos(h*pi*i);
-        }
-
-        return lambda;
-    }
-    
-The Software Manual Page for each of the functions listed above are linked below. 
+The Software Manual Page for each of the functions listed above are linked below.   
 
 [DirichletSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/DirichletSolve.md)    
-[AminusLambda](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/AminusLambda.md)     
-[AssignLambda](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/AssignLambda.md)     
-
-    
-    
+[RHSinit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/RHSinit.md)     
     
 ## Task 3
 
-Repeat the previous task with $f(x)=10.0\ sin(2\pi x)\) and use homogeneous Dirichlet boundary conditions.
+Repeat the previous task with $f(x)=10.0\ sin(2\pi x)\) and use homogeneous Dirichlet boundary conditions. This means u(a)=0, and u(b) = 0.
 
 ### Response
-Due to lack of understanding how to go about actually solving this problem, the conclusion of this excersise and the following three was that the understanding of what was being done was not there, at least to get
-the answers that were being requested. There were 5 whiteboards filled with attempts to solve this problem with pseudocode and handwritten work.
+In the process of completion. . . .    
 
 ## Task 4
 
 Repeat the previous two tasks combining f(x) from Task 3 with the boundary conditions given in Task 2.
 
 ### Response
-Due to lack of understanding how to go about actually solving this problem, the conclusion of this excersise and the following three was that the understanding of what was being done was not there, at least to get
-the answers that were being requested. 
+In the process of completion. . . .     
 
 ## Task 5
 
 Create a new code from the elliptic problem with Neumann boundary conditions. Using the same data as in Task 4 test your code using homogeneous Neumann conditions. Also, run a test case for unit fluxes at both ends of the domain.
 
 ### Response
-Due to lack of understanding how to go about actually solving this problem, the conclusion of this excersise and the following three was that the understanding of what was being done was not there, at least to get
-the answers that were being requested. The confusion for this one arose mainly after getting to a certain point in solving the Dirichlet ba=oundary problems. 
+There is still some confusion with this problem, but it is in the process of being completed. . . .   
 
 ## Task 6
  Search the internet for discussions of handling Dirichlet versus Neumann conditions. Write a brief paragraph (3 or 4 sentences) that describes your findings. Include links to the sites you cite.
