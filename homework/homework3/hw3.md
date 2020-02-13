@@ -59,15 +59,15 @@ h=1/8 and refine to h=1/256.
 ### Response
 The following code was used to solve the Dirichlet Boundary Value problem. The original misunderstanding was with the substitution methods. I was attempting to put all the methods into one, which was not how it should be, since the substitution aids in solving the system. 
   
-      public double[] DirichletSolve(double[][] array, double[] u, double ua, double ub)
-      {
+    public double[] DirichletSolve(double[][] array, double[] u, double ua, double ub)
+    {
         try {
             //for : with f(x) = 10*sin(2i*pi)
             BufferedWriter writer = new BufferedWriter(new FileWriter("Y.txt"));
             BufferedWriter xwriter = new BufferedWriter(new FileWriter("X.txt"));
             // for 1:3 with f(x) = 0
-      //            BufferedWriter writer = new BufferedWriter(new FileWriter("Vvalues.txt"));
-      //            BufferedWriter xwriter = new BufferedWriter(new FileWriter("Xvalues.txt"));
+//            BufferedWriter writer = new BufferedWriter(new FileWriter("Vvalues.txt"));
+//            BufferedWriter xwriter = new BufferedWriter(new FileWriter("Xvalues.txt"));
 
 
 
@@ -101,11 +101,11 @@ The following code was used to solve the Dirichlet Boundary Value problem. The o
                 xwriter.write("\n");
             }
 
+            //close the files, assign sol to u for return.
+            //u = sol due to the fact if the try is not ran, but theres no error, u will still be returned unchanged.
             writer.close();
             xwriter.close();
-
-            //TODO: RETURN values of u
-            //return u;
+            u = sol;
         }
         catch(IOException io)
         {
@@ -113,28 +113,27 @@ The following code was used to solve the Dirichlet Boundary Value problem. The o
             io.printStackTrace();
         }
         return u;
-    }   
+    } 
     
-To solve for the Right Hand Side the following function was used.   
+To solve for the Right Hand Side the following function was used. It is in the process of getting updated to take a function arguement in the passed in values. When that is updated, the Software Manual page will be updated to reflect that change. For the purpose of tasksheet 3 the following version works for the tasks given.   
 
-      public double[] RHSinit(double[] fx, double ua, double ub)
+       public double[] RHSinit(double[] fx, double ua, double ub)
       {
         //init array to what the formula is
         int n = fx.length;
         double[] rhs = new double[n];
 
-        //function
-        for (int i = 0; i < ub; i++)
+        for (int i = 0; i < n; i++)
         {
-            rhs[i] = 0.0;
-            //rhs[index] = 10*sin(2*pi*i);
+            //rhs[i] = 0.0;
+            rhs[i] = 10*sin(2*pi*i);
         }
         //Dirichlet conditions, f(x0) - ua/h^2
         rhs[0] = rhs[1] - ua;
         rhs[n-1] = rhs[n-1] - ub;
 
         return rhs;
-    }
+      }
     
     
 The graphs that follow are for n = 200, with h = 1/8 and h = 1/256 for f(x) = 0, ua = 1, and ub = 3
