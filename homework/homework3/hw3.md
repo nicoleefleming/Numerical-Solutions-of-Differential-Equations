@@ -176,7 +176,69 @@ In using roots that are unequal to each other, only a few modifictations were ma
 Create a new code from the elliptic problem with Neumann boundary conditions. Using the same data as in Task 4 test your code using homogeneous Neumann conditions. Also, run a test case for unit fluxes at both ends of the domain.
 
 ### Response
-There is still some confusion with this problem, but it is in the process of being completed. . . .   
+The Neumann problem that was faced was in generating an array that had the correct numbers and values in the array the entire time. The soluiton was found to be that the Finite Difference Coefficient solver already developed did this rather nicely. That difference fo the coefficeints was calculated first, before calling the method NeumannSolve. This method was created in the last section and is called findCoeffs. It returned an array that was accurate to what was needed for this problem. After the coefficients were solved the array was passed into the method NeumannSolve, which takes the array, and solves for the u values in the A * U = F equation. I used the conditions ua' = 1, ub' = 3, and ua' = 0, ub' = 0 to verify that it was working properly, and not giving the same values for either conditions. The code for NeumannSolve is below followed by the link to the Software Manual page.
+
+The unit test for flux I was not sure what to do or how to go about doing that.
+
+    public double[] NeumannSolve(double[][] array, double[] u, double uaprime, double ubprime)
+    {
+        try {
+            //for : Neumann Conditions specifically those on the third tasksheet.
+            BufferedWriter writer = new BufferedWriter(new FileWriter("Y.txt"));
+            BufferedWriter xwriter = new BufferedWriter(new FileWriter("X.txt"));
+            // for 0:0 with f(x) = 0 and for 1:3 with f(x) = 0
+            //BufferedWriter writer = new BufferedWriter(new FileWriter("Vvalues.txt"));
+            //BufferedWriter xwriter = new BufferedWriter(new FileWriter("Xvalues.txt"));
+
+            double[] solve;
+            double[] fullSol;
+            int len = array.length;
+            double[] fx = new double[len];
+            fx = u;
+            //use coeffs for array values.
+            //1, {0,1,2}, 2
+            //Array is the Coeffs matrix
+
+            //need to initialize RHS for solving, with values to prove if it is right.
+            solve = RHSinit(fx, 1, 3);
+
+            //LU factorization or GEsolve. 
+            solve = forward(array,solve);
+            fullSol = backward(array, solve);
+
+
+            //Print out the values to a file of U and f(x)
+            for (int i = 0; i < len; i++) {
+                //write file to Vvalues.txt for all u
+                String writeMe = Double.toString(fullSol[i]);
+                writer.write(writeMe);
+                writer.write("\n");
+
+                //write to file all x for i
+                String xVal = Double.toString(i);
+                xwriter.write(xVal);
+                xwriter.write("\n");
+            }
+
+            writer.close();
+            xwriter.close();
+            u = fullSol;
+
+        }
+        catch(IOException io)
+        {
+            System.out.println("IO EXCEPTION CAUGHT \n");
+            io.printStackTrace();
+        }
+
+        //return answer array.
+        return u;
+    }
+
+
+The Software Manual Page for NeumannSolve. The findCoeffs, and RHSinit methods are also used.     
+[NeumannSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/NeumannSolve.md)
+
 
 ## Task 6
  Search the internet for discussions of handling Dirichlet versus Neumann conditions. Write a brief paragraph (3 or 4 sentences) that describes your findings. Include links to the sites you cite.
