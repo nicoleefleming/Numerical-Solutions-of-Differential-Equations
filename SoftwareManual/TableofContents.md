@@ -13,7 +13,7 @@ All the code written for the Math 5620 Course put into their respective class ca
 1.  [DirichletSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/DirichletSolve.md)
 2.  [NeumannSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/NeumannSolve.md)
 3.  [RHSinit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/RHSinit.md)
-4.  [GEsolve (the same as triDiagSolve)](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/triDiagSolve.md)
+4.  [GEsolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/GEsolve.md)
 ### Substitution   
 1. [forward](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/forward.md)   
 2. [backward](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/backward.md)   
