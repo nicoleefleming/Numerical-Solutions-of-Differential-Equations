@@ -48,7 +48,7 @@ The routine has two arguments the 2D array and a 1D  array. To test that it was 
             System.out.println(solution[i] + " ");
         }
 
-**Implementation/Code:** The following is the unfinished code for DirichletSolve
+**Implementation/Code:** The following is the finished code for DirichletSolve
  
     public double[] DirichletSolve(double[][] array, double[] u, double ua, double ub)
     {
