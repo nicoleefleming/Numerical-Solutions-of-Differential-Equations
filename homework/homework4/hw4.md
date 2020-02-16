@@ -135,9 +135,9 @@ Search the internet for discussions of using finite difference methods to handle
 (k(x)u′)′=f      
 with with any type of boundary conditions. Write a brief paragraph (3 or 4 sentences) that describes your findings. Include links to the sites you cite.
 ### Response
-My findings go here.
+It was interesting to read through the Stack Exchange on a question like this involving a similar proble, the thing that caught my interest right away was the first answer as the responder talks about how if k is continuous, one can abstract it out to test or see the fluxes. In the last tasksheet, I wonder if this would have worked to test for the fluxes near the endpoints. Upon looking into the fluxes that can occur or be modeled, it is important to note that these fluxes that the first responder notes are due to some sort of non-linear k.  I learned that the k(x) is very helpful in modeling and predicting the outcome for fluxes on a system.
 
 #### Sources
-[]()
-[]()
-[]()
+[Stack Exchange discussion](https://math.stackexchange.com/questions/1509291/numerical-solution-of-non-constant-coefficient-diffusion-equation-via-finite-dif)       
+[Another discussion on Math Stack Exchange](https://math.stackexchange.com/questions/2952304/discretize-derivative-of-heat-flux-with-variable-conductivity?noredirect=1&lq=1)       
+For a more information on flux I googled flux and read the definition that resulted.
