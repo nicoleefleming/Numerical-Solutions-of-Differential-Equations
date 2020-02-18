@@ -68,19 +68,7 @@ Here is the link to the Software Manual Pages for the functions used above.
 In class we will see how to perform a computational convergence analysis. Do this on the constant coefficient case where homogeneous Dirichlet conditions are imposed. Note that you will need an exact solution for the problem. If 
 f(x)=x−x^2, determine an exact solution for this task.
 ### Response
-Supposing in the code stated in Task 1, that k(x) or a(x) remains a constant, the main change between the two is that f(x) is a function, other than cos(x). The value of k(x) is still assigned to be a constant. In the simplest form of testing for this task, k(x) = 1, for all x. The routine used to verify was still the funcDirichlet method, and the link is included at the end of Task 1, but is listed below as well. The trick for this task was getting the method to work with the homogeneous conditions. This was done when I realized that I forgot to handle the boundary values in the final answer before entering the Gaussian Elimination method. This has been fixed in Task 1 and the manual. 
-
-Using the inuputs of x as {0,1,2} the answers calculated after the entire process with consideration that f(x) = x - x^2, and k(x) as a constant, the values found were:
-            -2.0        
-            -3.0        
-            -96.38461538461539      
-
-The only change made was what values were initialized into the array b. The alterations to the first value and last value before Gaussian Elimination were due to the Boundary Conditions. The final answer shown above is due to all of these facts. RHSinit was also used in this task, and the link is included here, since f(x) was altered in this function from what it was set to on the last set of assignments.
-
-[funcDirichlet](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/funcDirichlet.md)    
-[aOfXinit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/aOfXinit.md)    
-[aXaverage](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/aXaverage.md)
-[RHSinit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/RHSinit.md)
+Working on this one.
 
 ## Task 3
 Repeat the previous task for the case when the coefficient is specified as    
@@ -119,7 +107,7 @@ The values found were the result of the funcDirichlet code, and the calls inside
 ## Task 4
 Use f and homogeneous Dirichlet conditions in this task. Use the array of values provided by your instructor to represent the coefficient function, k(x). This may require that you modify your code to handle an array over a function definition.
 ### Response
-What array of values? **ASK ABOUT THIS!
+Working on this one.
 
 ## Task 5
 Build software manual pages for the elliptic solver codes you have written so far.
