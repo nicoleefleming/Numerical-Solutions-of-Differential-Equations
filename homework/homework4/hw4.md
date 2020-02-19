@@ -68,7 +68,7 @@ Here is the link to the Software Manual Pages for the functions used above.
 In class we will see how to perform a computational convergence analysis. Do this on the constant coefficient case where homogeneous Dirichlet conditions are imposed. Note that you will need an exact solution for the problem. If 
 f(x)=x−x^2, determine an exact solution for this task.
 ### Response
-Working on this one.
+Fixing on this one.
 
 ## Task 3
 Repeat the previous task for the case when the coefficient is specified as    
