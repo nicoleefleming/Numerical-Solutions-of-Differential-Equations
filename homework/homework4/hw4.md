@@ -73,7 +73,7 @@ Fixing on this one.
 ## Task 3
 Repeat the previous task for the case when the coefficient is specified as    
 k(x)=sin(πx)
-### Response
+### Response - This upon working on number 2 and 4 might need to be reworked...
 This was actually one of the verified functions tested with k(x) when f(x) = cos(x). The difference here is that k(x) is applied to f(x) = x - x^2. The change of f(x) was changed in the last task, so the process was simple once having the working code for task 2, all this task needed to change was the value of k(x).     
 
 The function that was altered for this was the aOfXinit, where aX was set to a different value depending on the value of x. The code that follows shows the change in k(x). 
