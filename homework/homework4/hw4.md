@@ -76,7 +76,7 @@ Fixing on this one.
 ## Task 3
 Repeat the previous task for the case when the coefficient is specified as    
 k(x)=sin(πx)
-### Response - This upon working on number 2 and 4 might need to be reworked...
+### Response - This upon working on number 2 needs to be reworked...
 This was actually one of the verified functions tested with k(x) when f(x) = cos(x). The difference here is that k(x) is applied to f(x) = x - x^2. The change of f(x) was changed in the last task, so the process was simple once having the working code for task 2, all this task needed to change was the value of k(x).     
 
 The function that was altered for this was the aOfXinit, where aX was set to a different value depending on the value of x. The code that follows shows the change in k(x). 
@@ -112,7 +112,108 @@ Use f and homogeneous Dirichlet conditions in this task. Use the array of values
 ### Response
 This task was met with some confusion due to values in the oslution array returning NaN. The solution was to adjust the funcDirichlet to not alter the Coeffs matrix, and use k(x) as A in the way presented in class. Using a hard coded array with values given and parsing the data from a file yielded the same results. They are as follows:     
 
+      0.0 
+      0.0 
+      -2.0 
+      -8.373209140530227 
+      -22.369242245061358 
+      -20.39502775305552 
+      -50.29533355880184 
+      -83.39840498281364 
+      -141.94413784110083 
+      -92.15073930193964 
+      -170.91028101511904 
+      -433.87063983279654 
+      -1786.387394014651 
+      816.9629791410954 
+      -3.214696635165751 
+      -211.2611517672076 
+      -416.06886378037393 
+      -942.6964699565167 
+      -12362.269951190707 
+      861.2867424087606 
+      121.40537760817477 
+      -337.1089886626117 
+      -760.055006942748 
+      -1119.2970580741662 
+      -1006.8323210882023 
+      -1210.6195069051162 
+      -2169.724138362265 
+      -1430.1073854591907 
+      -869.2966526001405 
+      -1702.0764370768666 
+      -2829.5033398695405 
+      -5681.711618235038 
+      -1978.2586602428505 
+      -2997.5871262431074 
+      -5552.754814184318 
+      -15775.53351217391 
+      30028.175120987806 
+      4760.7879119944155 
+      -652.8983029588451 
+      -2185.384319428885 
+      -1738.5704262919746 
+      -3398.4421787840956 
+      -4228.709151107485 
+      -5886.550658119038 
+      -8098.139838172492 
+      -6324.0321151899825 
+      -3423.4004661307126 
+      -5657.450921275992 
+      -5823.725550202629 
+      -9362.654914777917 
+      -15040.69347980016 
+      -5829.486960816093 
+      -8522.624260544642 
+      -9488.570188820122 
+      -3960.8146512944895 
+      -6951.5698499224745 
+      -12848.074325430074 
+      -16865.332783219194 
+      -5782.165913102307 
+      -9124.093568852171 
+      -6923.9978216789 
+      -11325.459643534661 
+      -13418.604154495722 
+      -18934.463313172615 
+      -15316.5821955675 
+      -19900.52904076599 
+      -11242.16001245372 
+      -15316.235236021796 
+      -8153.666009620282 
+      -13036.337889617222 
+      -14465.369293454787 
+      -14908.639054134179 
+      -19305.34605160511 
+      -16331.373561782542 
+      -19362.18062692116 
+      -19815.556638151473 
+      -25028.127273971873 
+      -13325.138274477917 
+      -19155.806957463516 
+      -35238.49007656136 
+      -12354.122150362213 
+      -7459.515548920108 
+      -14556.937759379642 
+      -31991.04945372725 
+      -13752.000922974134 
+      -19927.591912859552 
+      -29026.64212570264 
+      -29038.724444023814 
+      -43039.74141863739 
+      -67410.71952270633 
+      -50917.97468057962 
+      -68410.5253572042 
+      -9190.185761584808 
+      -17643.129795263314 
+      -40324.70837377873 
+      -22211.861154648832 
+      -31658.29247566456 
+      -9827.156608679985 
+      -18444.74266879184 
+      -65269.89582606165         
 
+The last entry is the one I am unsure about. From class discussion I think that the last entry should be 0.0, but it is not. 
 
 Software Manual Pages used
 [funcDirichlet](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/funcDirichlet.md)    
