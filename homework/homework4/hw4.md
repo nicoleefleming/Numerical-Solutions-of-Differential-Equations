@@ -215,7 +215,7 @@ This task was met with some confusion due to values in the oslution array return
 
 The last entry is the one I am unsure about. From class discussion I think that the last entry should be 0.0, but it is not. 
 
-Software Manual Pages used
+Software Manual Pages:        
 [funcDirichlet](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/funcDirichlet.md)    
 [input](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/input.md)    
 
