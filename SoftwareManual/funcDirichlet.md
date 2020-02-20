@@ -35,7 +35,7 @@ To test this method, the following lines of code were used.
      aX = linsolve.aOfXinit(aX);
      kX = linsolve.aXaverage(aX, kX);
     
-     solution = linsolve.funcDirichlet(kX, ua, ub, Coeffs, x, h);
+     solution = linsolve.funcDirichlet(kX, ua, ub, x, h);
      //test for funcNeumann
      for (int i = 0; i < solution.length; i++)
      {
@@ -53,12 +53,12 @@ To test this method, the following lines of code were used.
         //Initialize RHS
         b = RHSinit(b, ua, ub);
 
-        //Get the Coeffs multiplied by kX correctly...
+        
         for (int row = 0; row < b.length; row++)
         {
             for (int col = 0; col < b.length; col++)
             {
-                //Compute the kX impact on Coeffs Matrix
+                //Compute the kX Matrix
                     if(row == col)
                     {
                         //compute values of k to multiply, so not to go out of bounds of the array.
@@ -68,17 +68,17 @@ To test this method, the following lines of code were used.
                             hold = (-1)* kX[row];
 
                         //main diagonal
-                        matrix[row][col] = Coeffs[row][col] * hold;
+                        matrix[row][col] = hold;
                     }
                     if(row + 1 < b.length)
                     {
                         //superdiagonal
-                        matrix[row + 1][row] = Coeffs[row + 1][row] * kX[row + 1];
+                        matrix[row + 1][row] = kX[row + 1];
                     }
                     if(row + 2 < b.length)
                     {
                         //subdiagonal
-                        matrix[row][row + 1] = Coeffs[row][row + 1] * kX[row + 2];
+                        matrix[row][row + 1] = kX[row + 2];
                     }
             }
         }
@@ -94,4 +94,4 @@ To test this method, the following lines of code were used.
     }
      
 
-**Last Modified:** 15/February/2020
+**Last Modified:** 20/February/2020
