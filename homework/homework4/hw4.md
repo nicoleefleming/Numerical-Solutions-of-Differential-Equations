@@ -9,21 +9,23 @@ If this means to do the findCoeffs funciton, this is incomplete at the moment. H
     
 For this problem, a three new methods were created, with the main method being to take the function and incorporate the values of the function, a constant here, into the matrix. The code that was written and tested with various values for k(x) as constants and as the funtion k(x) = sin(pix). The manual assumes b to be the values found from u(x) = cos(x).
 
-    public double[] funcDirichlet(double[] kX, double ua, double ub, double[][] Coeffs, double[] b, double h)
+    public double[] funcDirichlet(double[] kX, double ua, double ub, double[] b, double h)
     {
         double[] sol = new double[kX.length];
         double[][] matrix = new double[b.length][b.length];
         double hold;
        
-        //Initialize RHS
+        //Initialize RHS (f(x))
+        //This is here due to using b in another method before this one. 
+        //This verifies the values of b are what they should be
         b = RHSinit(b, ua, ub);
         
-        //Get the Coeffs multiplied by kX correctly...
+        //kX init to A
         for (int row = 0; row < b.length; row++)
         {
             for (int col = 0; col < b.length; col++)
             {
-                //Compute the kX impact on Coeffs Matrix
+                //Compute the kX Matrix
                     if(row == col)
                     {
                         //compute values of k to multiply, so not to go out of bounds of the array.
@@ -33,20 +35,21 @@ For this problem, a three new methods were created, with the main method being t
                             hold = (-1)* kX[row];
 
                         //main diagonal
-                        matrix[row][col] = Coeffs[row][col] * hold;
+                        matrix[row][col] = hold;
                     }
                     if(row + 1 < b.length)
                     {
                         //superdiagonal
-                        matrix[row + 1][row] = Coeffs[row + 1][row] * kX[row + 1];
+                        matrix[row + 1][row] = kX[row + 1];
                     }
                     if(row + 2 < b.length)
                     {
                         //subdiagonal
-                        matrix[row][row + 1] = Coeffs[row][row + 1] * kX[row + 2];
+                        matrix[row][row + 1] = kX[row + 2];
                     }
             }
         }
+        
         //Initial conditions for range added to b[]
         b[0] = b[0] - ((kX[0]/(Math.pow(h, 2)))*ua);
         b[b.length-1] = b[b.length-1] - (((kX[b.length-1])/(Math.pow(h, 2)))*ub);
@@ -93,11 +96,11 @@ The function that was altered for this was the aOfXinit, where aX was set to a d
         return aX;
     }
     
-The answers to this problem as computed for a 3x3 matrix by the code written are as follows:
+The answers to this problem as computed for a 3x3 matrix by the code written are as follows:     
           -2.0       
           -3.0         
           -96.38461538461539           
-The values found were the result of the funcDirichlet code, and the calls inside that method to RHSinit, aOfXinit, aXaverage, and GEsolve. The links to the Software Manual pages are below. 
+The values found were the result of the funcDirichlet code, and the calls inside that method to RHSinit, aOfXinit, aXaverage, and GEsolve. The links to the Software Manual pages are below.     
 
 [funcDirichlet](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/funcDirichlet.md)    
 [aOfXinit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/aOfXinit.md)    
@@ -107,7 +110,13 @@ The values found were the result of the funcDirichlet code, and the calls inside
 ## Task 4
 Use f and homogeneous Dirichlet conditions in this task. Use the array of values provided by your instructor to represent the coefficient function, k(x). This may require that you modify your code to handle an array over a function definition.
 ### Response
-Working on this one.
+This task was met with some confusion due to values in the oslution array returning NaN. The solution was to adjust the funcDirichlet to not alter the Coeffs matrix, and use k(x) as A in the way presented in class. Using a hard coded array with values given and parsing the data from a file yielded the same results. They are as follows:     
+
+
+
+Software Manual Pages used
+[funcDirichlet](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/funcDirichlet.md)    
+[input](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/input.md)    
 
 ## Task 5
 Build software manual pages for the elliptic solver codes you have written so far.
@@ -117,6 +126,7 @@ This was completed after each of the methods were written and verified they work
 2. [funcDirichlet](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/funcDirichlet.md)    
 3. [aOfXinit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/aOfXinit.md)    
 4. [aXaverage](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/aXaverage.md)
+5. [input](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/input.md)
 
 ## Task 6
 Search the internet for discussions of using finite difference methods to handle a nonconstant coefficient function. That is, find sites for elliptic problems of the form     
