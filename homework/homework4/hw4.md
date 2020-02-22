@@ -71,41 +71,42 @@ Here is the link to the Software Manual Pages for the functions used above.
 In class we will see how to perform a computational convergence analysis. Do this on the constant coefficient case where homogeneous Dirichlet conditions are imposed. Note that you will need an exact solution for the problem. If 
 f(x)=x−x^2, determine an exact solution for this task.
 ### Response
-Fixing on this one.
+This task began with written work to get an array to represent the rate of convergence. in solving this array, the numbers found were very large, and not at all what should have been found if the equation was considered to be log(||E||) = log(C) + plog(h). Upon reading Appendix A in the text book the equation for the value of p in section A.6.1 was used. The method written is as follows.       
+The arr4err is initialized with h_i in the first column, ||E_i|| in the second, log(h_i) in the third, and log(||E_i||) in the fourth.
+
+    public double calculateP(double[][] arr4err, double length)
+    {
+
+        double ans = 0;
+
+        //calculate ans based on equation on pg 255 in Appendix A in textbook
+        for (int i = 0; i < length-1; i++)
+        {
+            ans = ((arr4err[3][i]/arr4err[3][i+1])/(arr4err[2][i]/arr4err[2][i+1]));
+        }
+
+        return ans;
+    }
+    
+The way presented in class was to have a linear set of equations where the left hand side held the {length, sum of all of h values; sum of all of h values, sum of all of h values squared.} * {a, b} = {sum of all ||E||; sum of all h * ||E||}. This was returning values in the large negative number range, the number was -152.7510248544807. I went with the equation in section A.6.1 and it returned
+     
+     p is 0.9833132538405166 
+     
+
+Software Manual Page:        
+[calculateP](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/calcualteP.md)    
 
 ## Task 3
 Repeat the previous task for the case when the coefficient is specified as    
 k(x)=sin(πx)
-### Response - This upon working on number 2 needs to be reworked...
-This was actually one of the verified functions tested with k(x) when f(x) = cos(x). The difference here is that k(x) is applied to f(x) = x - x^2. The change of f(x) was changed in the last task, so the process was simple once having the working code for task 2, all this task needed to change was the value of k(x).     
+### Response   
+Using the same function as in Task 2, to find the value of p, the method used was calculate p. The value found was
 
-The function that was altered for this was the aOfXinit, where aX was set to a different value depending on the value of x. The code that follows shows the change in k(x). 
-
-    public double[] aOfXinit(double[] aX)
-    {
-        int n = aX.length;
-        //function:
-        //TS4 #1: a(x) is a constant, so a(x) = 1
-
-        for (int i = 0; i < n; i ++)
-        {
-            aX[i] = sin(pi*i); //1.0;
-        }
-
-        //return the calculated values
-        return aX;
-    }
+    1.0013986262535357
     
-The answers to this problem as computed for a 3x3 matrix by the code written are as follows:     
-          -2.0       
-          -3.0         
-          -96.38461538461539           
-The values found were the result of the funcDirichlet code, and the calls inside that method to RHSinit, aOfXinit, aXaverage, and GEsolve. The links to the Software Manual pages are below.     
+ The Software manual page is:             
 
-[funcDirichlet](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/funcDirichlet.md)    
-[aOfXinit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/aOfXinit.md)    
-[aXaverage](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/aXaverage.md)
-[RHSinit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/RHSinit.md)
+[calculateP](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/calcualteP.md)    
 
 ## Task 4
 Use f and homogeneous Dirichlet conditions in this task. Use the array of values provided by your instructor to represent the coefficient function, k(x). This may require that you modify your code to handle an array over a function definition.
