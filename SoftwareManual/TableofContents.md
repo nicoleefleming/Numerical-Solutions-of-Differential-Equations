@@ -18,6 +18,7 @@ All the code written for the Math 5620 Course put into their respective class ca
 5.  [funcDirichlet](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/funcDirichlet.md)
 6.  [aXaverage](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/aXaverage.md)
 7.  [aOfXinit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/aOfXinit.md)
+8.  [calcualteP](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/calcualteP.md)
 ### Substitution   
 1. [forward](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/forward.md)   
 2. [backward](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/backward.md)   
