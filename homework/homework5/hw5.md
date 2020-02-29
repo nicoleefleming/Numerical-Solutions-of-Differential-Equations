@@ -33,12 +33,12 @@ The results of this task with a 10 x 10 diagonal system, using the matrix 2.82 i
 2.7557319223985893E-6; -8.969271343096052E-11; 2.59492525128631E-15; -1.0912965891160656E-19; 4.2201892402752574E-20; 1.0918557142468354E-20; 2.304859424507752E-21; -7.035945323795552E-21; 4.434137262868689E-22; 9.673275192234932E-22;     
 
       
-The Software Manual Pages to the methods used are listed below       
-[nonLinearInit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/nonLinearInit.md)
-[nonlinearFDSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/nonlinearFDSolve.md)
-[findCoeffs](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/findCoeffs.md)
-[factorial](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/factorial.md)
-[triDiagSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/triDiagSolve.md)
+The Software Manual Pages to the methods used are listed below           
+[nonLinearInit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/nonLinearInit.md)         
+[nonlinearFDSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/nonlinearFDSolve.md)          
+[findCoeffs](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/findCoeffs.md)         
+[factorial](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/factorial.md)        
+[triDiagSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/triDiagSolve.md)        
 
 ## Task 2
 Simplify the problem in Task 1 using the small angle assumption 
@@ -58,12 +58,12 @@ Following the same procedure as in task 1 by following the book, the same method
 2.7557319223985893E-6; -8.969271344705414E-11; 2.5949248277181377E-15; -1.0997668946230143E-19; 1.8435463113960395E-20; 6.525015604270298E-20; -2.2501932210767406E-21; -7.703277700167968E-21; 2.8168891406845832E-21; -4.389238951317562E-21; 
      
 
-The Software Manual Pages to the methods used are listed below       
-[nonLinearInit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/nonLinearInit.md)
-[nonlinearFDSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/nonlinearFDSolve.md)
-[findCoeffs](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/findCoeffs.md)
-[factorial](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/factorial.md)
-[triDiagSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/triDiagSolve.md)
+The Software Manual Pages to the methods used are listed below                 
+[nonLinearInit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/nonLinearInit.md)            
+[nonlinearFDSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/nonlinearFDSolve.md)           
+[findCoeffs](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/findCoeffs.md)           
+[factorial](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/factorial.md)           
+[triDiagSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/triDiagSolve.md)          
 
 ## Task 3
  Let's start into approximate solution of partial difference equations. With the simplest equation,
