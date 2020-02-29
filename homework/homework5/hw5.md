@@ -75,7 +75,12 @@ Working on the code will push when finished.
 ## Task 4
 Write a routine that implements Jacobi iteration for the approximate solution linear systems of equations.
 ### Response
-Working on the code will push when finished.
+The code developed exists in two new methods. One is the Jacobi calculation. I want to either have a variation of this method, or go back and make this work for the way we wrote the matrix in class, with the    
+x^(k+1) = d^(-1) * (b - (L+U) * x^(k)).           
+Currently I don't beleive I have that version implemented. I will look at the methods more after I have task 3 working, and task 5 is being worked on. For now the methods used can be found at their Software Manual Links below.       
+
+[jacobi](https://github.com/nicoleefleming/math5620/tree/master/SoftwareManual/jacobi.md)    
+[test_convergence](https://github.com/nicoleefleming/math5620/tree/master/SoftwareManual/test_convergence.md)    
 
 ## Task 5
 Write a code that solves the elliptic problem in Task 1 using your Jacobi iteration. Use f(x,y) = xy and homogeneous boundary conditions.
