@@ -10,6 +10,8 @@ All the code written for the Math 5620 Course put into their respective class ca
 6.  [AminusLambda](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/AminusLambda.md)
 7.  [AssignLambda](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/AssignLambda.md)
 8.  [input](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/input.md)
+9.  [nonLinearInit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/nonLinearInit.md)
+10. [nonlinearFDSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/nonlinearFDSolve.md)
 ### Linear Solvers  
 1.  [DirichletSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/DirichletSolve.md)
 2.  [NeumannSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/NeumannSolve.md)
