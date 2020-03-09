@@ -20,7 +20,7 @@ will produce in running the program in both sources. If one does not have the gr
     
 These commands should also work.
 
-**Description/Purpose:** This routine will solve for the values of the right hand side, in the simplist case, this means that all of f(x,y) = xy. Using the Dirichlet Boundaries, f(x0) and the last f(x) subtract the boundary conditions given. This method returns the right hand side vector.
+**Description/Purpose:** This routine will solve for the values of the right hand side, in the simplist case, this means that all of f(x,y) = xy. Using the Dirichlet Boundaries, f(x0, y0) and the last f(xN, yN) subtract the boundary conditions given. This method returns the right hand side vector.
 
 **Input:** There are  inputs: double[] pdx, double[] pdy, double ua, double ub. The array fx is only used for the length. This could be changed to an int or double for the purpose of getting the size of the array. The boundary conditions are given by ua and ub, where ua is the lower condition, and ub is the higher condition. If ua is equal to ub, in a homogeneous case, it won't matter which value is which when passed in.
 
