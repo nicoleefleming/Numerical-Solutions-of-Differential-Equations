@@ -12,6 +12,10 @@ All the code written for the Math 5620 Course put into their respective class ca
 8.  [input](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/input.md)
 9.  [nonLinearInit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/nonLinearInit.md)
 10. [nonlinearFDSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/nonlinearFDSolve.md)
+### Iterative Methods
+1.  [pDiagInit](https://github.com/nicoleefleming/math5620/tree/master/SoftwareManual/pDiagInit.md)
+2.  [RHSpdeInit](https://github.com/nicoleefleming/math5620/tree/master/SoftwareManual/RHSpdeInit.md)
+3.  []()
 ### Linear Solvers  
 1.  [DirichletSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/DirichletSolve.md)
 2.  [NeumannSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/NeumannSolve.md)
