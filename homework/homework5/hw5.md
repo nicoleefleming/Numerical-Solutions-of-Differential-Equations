@@ -66,11 +66,59 @@ The Software Manual Pages to the methods used are listed below
 [triDiagSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/triDiagSolve.md)          
 
 ## Task 3
- Let's start into approximate solution of partial difference equations. With the simplest equation,
-Δu = ∂^2u/∂x^2 + ∂^2u/∂y^2 = f(x,y)
-Start by writing a code to initialize the associated pentadiagonal matrix using central differences. Do this using the sparse storage into 5 vectors. Also, write a routine that initializes the right hand side of the system of equations.
+ Let's start into approximate solution of partial difference equations. With the simplest equation,       
+Δu = ∂^2u/∂x^2 + ∂^2u/∂y^2 = f(x,y)       
+Start by writing a code to initialize the associated pentadiagonal matrix using central differences. Do this using the sparse storage into 5 vectors. Also, write a routine that initializes the right hand side of the system of equations.       
 ### Response   
-Working on the code will push when finished.
+I am still trying to figure out how to put in the logic to account for the rows of zeros in the matrix, to take it out of the sparse matrix that has been coded for solving. 
+
+The new methods written are pDiagInit, and RHSpdeInit. pDiag init takes the 5 diagonal rows and puts them into 5 columns in a matrix. The zeros diagonal logic is coming, but I am not sure how to implement it currently.          
+        
+    public double[][] pDiagInit(double[] ld, double[] al, double[] ad, double[] as, double[] ud)
+    {
+        double[][] init = new double[5][ad.length];
+
+        //do all the things.
+        //put all diagonals into the 5 following vectors.
+        for (int i = 0; i < ad.length; i++)
+        {
+            init[0][i] = ld[i];
+            init[1][i] = al[i];
+            init[2][i] = ad[i];
+            init[3][i] = as[i];
+            init[4][i] = ud[i];
+        }
+
+        return init;
+    }
+       
+The other is the RHSpdeInit which takes two variables of different values, and performs a funciton operation with them.        
+      
+      public double[] RHSpdeInit(double[] pdx, double[] pdy, double ua, double ub)
+    {
+            //init array to what the formula is
+            int n = pdx.length;
+            double[] rhs = new double[n];
+
+            for (int i = 0; i <= n-1; i++)
+            {
+                //rhs[i] = x*y
+                rhs[i] = pdx[i] * pdy[i];
+            }
+            //Dirichlet conditions, f(x0) - ua/h^2
+            for (int i = 0; i < n; i++)
+            {
+                System.out.println(rhs[i] + " ");
+            }
+            rhs[0] = rhs[1] - ua;
+            rhs[n-1] = rhs[n-1] - ub;
+
+            return rhs;
+    }
+    
+The links to the Software Manual pages are listed below.        
+[pDiagInit](https://github.com/nicoleefleming/math5620/tree/master/SoftwareManual/pDiagInit.md)
+[RHSpdeInit](https://github.com/nicoleefleming/math5620/tree/master/SoftwareManual/RHSpdeInit.md)
 
 ## Task 4
 Write a routine that implements Jacobi iteration for the approximate solution linear systems of equations.
