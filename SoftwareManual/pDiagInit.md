@@ -26,49 +26,73 @@ These commands should also work.
 
 **Output:** This routine will return a 5 x n dimensional array pDiag. The pDiag array is initailized by putting each 1D array into the 5D array. There is logic for handling the rows of zeros that is coming, but it is not implemented yet. 
 
-      1  1  -4  1  1
-      1  1  -4  1  1
-      1  1  -4  1  1
-      1  1  -4  1  1
-      1  1  -4  1  1
-      1  1  -4  1  1
-      1  1  -4  1  1
-      1  1  -4  1  1
-      1  1  -4  1  1
-      1  1  -4  1  1
+        -4 -4 -4 -4 -4 -4 -4 -4 -4  //ad
         
+        1 : 1      //ld : ud
+        1 : 1
+        1 : 1
+        1 : 1
+        1 : 1
+        1 : 1
+        
+        1 :: 1     //al :: as
+        1 :: 1
+        1 :: 1
+        1 :: 1
+        1 :: 1
+        1 :: 1
+        1 :: 1
+        1 :: 1
 
 **Usage/Example:**
 
 The routine has five 1D arrays that it stores into one matrix. The logic for the rows of zeros is coming, but this is the basic initialization.
                   
-        pDiag = iter.pDiagInit(ld, al, ad, as, ud);
-
-        for (int i = 0; i < n; i++)
+        iter.pDiagInit(ld, al, ad, as, ud);
+        for(int i = 0; i < ad.length; i++)
         {
-            System.out.println(pDiag[0][i] + " " + pDiag[1][i] + " " + pDiag[2][i] + " " + pDiag[3][i] + " " +pDiag[4][i] + "\n");
+          System.out.println(ad[i] + " ");  
         }
+        for(int i = 0; i < ld.length; i++)
+        {
+            System.out.println(ld[i] + " : "); 
+            System.out.println(ud[i] + " \n");
+        }
+        for(int i = 0; i < as.length; i++)
+        {
+            System.out.println(al[i] + " :: ")
+            System.out.println(as[i] + " \n");
+        }
+        
+        
 
 **Implementation/Code:** The following is the unfinished code for DirichletSolve
  
-    public double[][] pDiagInit(double[] ld, double[] al, double[] ad, double[] as, double[] ud)
+    public void pDiagInit(double[] ld, double[] al, double[] ad, double[] as, double[] ud, int n)
     {
         double[][] init = new double[5][ad.length];
+        //initialize vector values
+        int nx = n; //# of nodes in the first coordinate
+        int ny = n; //# of nodes in the second coordinate
+        int nxny = nx*ny; //the size of teh dimensions of the sparse matrix.
 
-        //do all the things.
-        //put all diagonals into the 5 following vectors.
-        for (int i = 0; i < ad.length; i++)
+        for(int i = 0; i < nxny; i++)
         {
-            init[0][i] = ld[i];
-            init[1][i] = al[i];
-            init[2][i] = ad[i];
-            init[3][i] = as[i];
-            init[4][i] = ud[i];
+            ad[i] = -4.0;
         }
-
-        return init;
+        for(int i = 0; i < (nxny - 1); i++)
+        {
+            as[i] = 1.0;
+            al[i] = 1.0;
+        }
+        for(int i = 0; i < nxny - nx; i++)
+        {
+            ud[i] = 1.0;
+            ld[i] = 1.0;
+        }
+        //void method for initializing values for the sparse matrix storage
     }
 
      
 
-**Last Modified:** 8/March/2020
+**Last Modified:** 10/March/2020
