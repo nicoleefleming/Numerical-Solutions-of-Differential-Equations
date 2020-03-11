@@ -28,31 +28,36 @@ INCORRECT
 Δu = ∂^2u/∂x^2 + ∂^2u/∂y^2 = f(x,y)       
 Start by writing a code to initialize the associated pentadiagonal matrix using central differences. Do this using the sparse storage into 5 vectors. Also, write a routine that initializes the right hand side of the system of equations.       
 ### Response   
-I am still trying to figure out how to put in the logic to account for the rows of zeros in the matrix, to take it out of the sparse matrix that has been coded for solving. 
+The first method used here, is the pDiagInit, which uses sparse storage of the matrix form, only storing the values in the non-zero diagonals ad, as, al, ud, and ld. Where ad is the main diagonal, as is the first super diagonal, al is the first sub diagonal, ud is the second super diagonal, and ld is the second lower diagonal. 
 
-     ADJUSTMENTS ARE BEING MADE TO FIX WHAT WAS NOT UNDERSTOOD.
-
-The new methods written are pDiagInit, and RHSpdeInit. pDiag init takes the 5 diagonal rows and puts them into 5 columns in a matrix. The zeros diagonal logic is coming, but I am not sure how to implement it currently.          
+     ADJUSTMENTS ARE BEING MADE TO FIX WHAT WAS NOT UNDERSTOOD.         
         
-    public double[][] pDiagInit(double[] ld, double[] al, double[] ad, double[] as, double[] ud)
+    public void pDiagInit(double[] ld, double[] al, double[] ad, double[] as, double[] ud, int n)
     {
         double[][] init = new double[5][ad.length];
+        //initialize vector values
+        int nx = n; //# of nodes in the first coordinate
+        int ny = n; //# of nodes in the second coordinate
+        int nxny = nx*ny; //the size of teh dimensions of the sparse matrix.
 
-        //do all the things.
-        //put all diagonals into the 5 following vectors.
-        for (int i = 0; i < ad.length; i++)
+        for(int i = 0; i < nxny; i++)
         {
-            init[0][i] = ld[i];
-            init[1][i] = al[i];
-            init[2][i] = ad[i];
-            init[3][i] = as[i];
-            init[4][i] = ud[i];
+            ad[i] = -4.0;
         }
-
-        return init;
+        for(int i = 0; i < (nxny - 1); i++)
+        {
+            as[i] = 1.0;
+            al[i] = 1.0;
+        }
+        for(int i = 0; i < nxny - nx; i++)
+        {
+            ud[i] = 1.0;
+            ld[i] = 1.0;
+        }
+        //void method for initializing values for the sparse matrix storage
     }
        
-The other is the RHSpdeInit which takes two variables of different values, and performs a funciton operation with them.        
+The other is the RHSpdeInit which takes two variables of different values, and performs a funciton operation with them. This is still being adjusted, and will be updated when it is finished.       
       
       public double[] RHSpdeInit(double[] pdx, double[] pdy, double ua, double ub)
     {
@@ -89,7 +94,10 @@ Currently I don't beleive I have that version implemented. I will look at the me
     
         
             
-            THIS CODE WORKS, JUST NOT HOW IT IS NEEDED TO. UPDATED CODE WILL BE PUSHED WHEN COMPLETE
+            THIS CODE WORKS, JUST NOT HOW IT IS NEEDED TO. UPDATED CODE WILL BE PUSHED WHEN COMPLETE.
+            THE CORRECT CODE FOR THE SPARSE MATRIX WILL BE STORED IN 5 VECTORS, AND JACOBI WILL BE UPDATED WITH THE METHOD OF USING THAT TO SOLVE FOR THE APPROXIMATIONS. 
+            
+            TEST_CONVERGENCE MAY BE UN-NEEDED FOR THIS TO WORK.
 
 
 
