@@ -21,41 +21,54 @@ where the method belonds to the class IterativeMethods.
 
 **Description/Purpose:** This is the Java implementation that was written for the course math5620 in Spring 2020. This is the code strucure that works there, and was the model for the C++ parallel implementation of the code. 
 
-**Input:** A 2D matrix, A; the right hand side, a 1D matrix, b; the unknowns, a 1D matrix, x; and the dimension, n. 
+**Input:** The main diagonal, ad; the first super diagonal, as; the first subdiagonal, al; the second superdiagonal, ud; the second subdiagonal, ld;  the right hand side, b; the unknowns, x; the row dimension, n; and the column dimension, m. 
 
-**Output:** This method will return the approximate answer for the 1D array of unknowns in the basic matrix equation A * x = b. 
+**Output:** This method will return the approximate answer for the 1D array of unknowns in the basic matrix equation A * x = b. It returns xnew.
 
-**Usage/Example:**  This is an iterative method that is used to approximate the values of the unknown values in matrices. This specific method was used in solving partial differential equation problems. It was written in February with intent to solve a equation of the form      
-Δu = ∂u/∂x^2 + ∂u/∂y^2 = f(x,y)
+**Usage/Example:**  This is an iterative method that will be used to solve the sparsely stored pentadiagonal matrix A. 
+The code can be tested by running it and printing out the results via a for loop.
+            
+        solution = iter.jacobi(ad, as, al, ud, ld, b, x, ad.length, ad.length);
 
-The code can be tested by running it and printing out the results via a for loop. (Will insert test code when I have it written)
+        for (int i = 0; i < solution.length; i++)
+        {
+            System.out.println("Jacobi Solution :" + solution[i] +" ");
+        }
+               
 
 **Implementation/Code:** 
 
-    public void jacobi(double A[][], double b[], int n, double x[])
+    public double[] jacobi(double[] ad, double[] as1, double[] al1, double[] as2, double[] al2, double[] b, double[] x, int n, int m)
     {
+        int nx = n; //length of row
+        int ny = m; //length of column
+        int nxny = nx*ny;
+        double[] xold = x;
+        double[] xnew = new double[nxny];
 
-        int i, j, k, p;
-        double []oldx;
+        for(int i = 0; i < nxny; i++)
+        {
+            xnew[i] = b[i];
+        }
 
-        oldx =  new double [n];
+        for (int i = 0; i < nxny - 1; i++)
+        {
+            xnew[i] = xnew[i] - (as1[i]*xold[i + 1]);
+            xnew[i] = xnew[i] - (al1[i]*xold[i]);
+        }
 
-        do {
-            for (i=0; i < n; i++)
-                oldx[i] = x[i];
+        for (int i = 0; i < nxny - nx; i++)
+        {
+            xnew[i] = xnew[i] - (as2[i] * xold[i + nx]);
+            xnew[i] = xnew[i] - (al2[i] * xold[i]);
+        }
 
-            for (i=0; i < n; i++)
-            {
-                x[i] = b[i];
-                for(j=0; j < n; j++)
-                    if ( i != j)
-                        x[i] = x[i] - A[i][j] * oldx[j];
-                x[i] = x[i]/A[i][i];
+        for (int i = 0; i < nxny; i++)
+        {
+            xnew[i] = xnew[i]/ad[i];
+        }
 
-            } // for
-
-        } while(test_convergence(x, oldx,n) == 0);
-
-    } //  jacobi
+        return xnew;
+    }
     
 **Last Updated: 29/February/2020**
