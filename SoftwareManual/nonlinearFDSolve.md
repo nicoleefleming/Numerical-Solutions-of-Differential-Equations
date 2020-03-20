@@ -45,9 +45,10 @@ Depending on what x and b are set to will change the outcome of this method.
 
 **Implementation/Code:** The following is the code for findCoeffs
 
-    public double[][] nonlinearFDSolve(double[] al, double[] ad, double[] as, int n, double[] b, int k, double[] x, double xbar, double h)
+     public double[][] nonlinearFDSolve(double[] al, double[] ad, double[] as, int n, double[] b, int k, double[] x, double xbar, double h)
     {
         double[][] toSolve = nonLinearInit(al, ad, as, n);
+        double[] xrow = new double[n];
 
         //test tri-diagonal matrix nonlinear initialized
         for (int i = 0; i < al.length; i++)
@@ -60,7 +61,24 @@ Depending on what x and b are set to will change the outcome of this method.
             System.out.println("\n");
         }
         //solve for the Finite Difference Coeffs.
-        double[][] sol = findCoeffs(k, x, xbar, b);
+        double[][] sol = new double[n][n]; // = findCoeffs(k, x, xbar, b);
+
+        sol = toSolve;
+        b[k] = 1.0;
+
+        for (int i = 0; i < n; i++)
+        {
+            xrow[i] = x[i] - xbar;
+        }
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                sol[i][j] = Math.pow(xrow[i], j) / factorial(i); //factorial 1*2*3*4...
+            }
+        }
+        triDiagSolve(sol, b);
 
         return sol;
     }
