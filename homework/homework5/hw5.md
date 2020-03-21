@@ -164,7 +164,33 @@ Currently I don't beleive I have that version implemented. I will look at the me
 ## Task 5
 Write a code that solves the elliptic problem in Task 1 using your Jacobi iteration. Use f(x,y) = xy and homogeneous boundary conditions.
 ### Response
-Working on the code will push when finished.
+I believe the following is true with the code below. This is subject to change, since x and y are two unknowns, and currently Jacobi only solves for x, so I will update if I figure out how to or if y needs to be incorporated. Here is the code, followed by the solution. Also, I will add in the error and tolerance parameters in the while loop, but they are not there at the moment. 
+
+        double[] tenAns = new double[pdx.length];
+        iters = 0;
+        maxIters = 100;
+        while(iters < maxIters)
+        {
+            tenAns = iter.jacobi(ad, as,al, ud, ld, rs, x, n, n);
+            iters++;
+            x[0] = xZero/iters;
+        }
+        for (int i = 0; i < tenAns.length; i++)
+        {
+            System.out.println("Jacobi Solution :" + tenAns[i] +" ");
+        }
+
+solution:         
+
+      Jacobi Solution :-0.4949531113597013 
+      Jacobi Solution :-0.49999638358979354 
+      Jacobi Solution :-2.0000036164102064 
+      Jacobi Solution :-4.499996383589794 
+      Jacobi Solution :-8.000003616410208 
+      Jacobi Solution :-12.499996383589798 
+      Jacobi Solution :-18.00000090410255 
+      Jacobi Solution :-24.499999095897447 
+      Jacobi Solution :-32.0 
 
 ## Task 6
 Search the internet for discussions of using finite difference methods for elliptic operators. Write a brief paragraph (3 or 4 sentences) that describes your findings. Include links to the sites you cite.
