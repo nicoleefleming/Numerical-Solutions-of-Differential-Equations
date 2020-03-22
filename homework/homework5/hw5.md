@@ -1,7 +1,5 @@
 # Tasksheet 5
  
- IN PROCESS
- 
 ## Task 1
 Write a finite difference code for the nonlinear elliptic problem
 θ′′(t) + (g/l) * sin(θ(t)) = 0
