@@ -58,8 +58,7 @@ The Software Manual Pages to the methods used are listed below
 Start by writing a code to initialize the associated pentadiagonal matrix using central differences. Do this using the sparse storage into 5 vectors. Also, write a routine that initializes the right hand side of the system of equations.       
 ### Response   
 The first method used here, is the pDiagInit, which uses sparse storage of the matrix form, only storing the values in the non-zero diagonals ad, as, al, ud, and ld. Where ad is the main diagonal, as is the first super diagonal, al is the first sub diagonal, ud is the second super diagonal, and ld is the second lower diagonal. 
-
-     ADJUSTMENTS ARE BEING MADE TO FIX WHAT WAS NOT UNDERSTOOD.         
+       
         
     public void pDiagInit(double[] ld, double[] al, double[] ad, double[] as, double[] ud, int n)
     {
