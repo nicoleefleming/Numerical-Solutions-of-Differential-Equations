@@ -15,7 +15,7 @@ This repository will host all the projects done over the course of Spring 2020 f
 
 ## Exams
 
-1. [Exam 1]()
+1. [Exam 1](https://github.com/nicoleefleming/math5620/blob/master/exams/Exam 1.pdf)
 
 ## Software Manual Link
 
