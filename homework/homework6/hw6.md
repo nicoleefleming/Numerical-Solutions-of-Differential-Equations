@@ -8,7 +8,9 @@ Task 1: Write a code that solves the Poisson equation where the linear solver us
 and homogeneous boundary conditions.
 
 ### Response
-
+Using the textbook, in Chapter 4, the equation that was implemented for the Gauss-Seidel model was the equation used in 4.10, for the 1D Poisson Problem. In not being certain if this will effectively solve the problem above that is 2D another method is being written for a 2D version of the Poisson problem given above. The code used for this is coming from page 70 of the text book, and it is the second code listing to implement the Gauss-Seidel method, according to the book. When the 2D method is updated, since this prompt seems to want a 2D solution since it uses two variables, x and y, That will also be added here as the solution to the problem stated above.        
+          
+For the 1D problem the code written had the form of xnew = (b - U*xold)/(D + L).        
        
 The Software Manual Pages to the methods used are listed below           
 []()
