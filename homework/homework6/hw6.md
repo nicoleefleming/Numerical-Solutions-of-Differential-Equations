@@ -10,12 +10,31 @@ and homogeneous boundary conditions.
 ### Response
 Using the textbook, in Chapter 4, the equation that was implemented for the Gauss-Seidel model was the equation used in 4.10, for the 1D Poisson Problem. In not being certain if this will effectively solve the problem above that is 2D another method is being written for a 2D version of the Poisson problem given above. The code used for this is coming from page 70 of the text book, and it is the second code listing to implement the Gauss-Seidel method, according to the book. When the 2D method is updated, since this prompt seems to want a 2D solution since it uses two variables, x and y, That will also be added here as the solution to the problem stated above.        
           
-For the 1D problem the code written had the form of xnew = (b - U*xold)/(D + L).        
-       
+For the 1D problem the code written had the form of xnew = (b - U * xold)/(D + L).      
+The code for it is listed in the software manual under gaussSeidel. The 2D solution to the problem will be listed under gaussSeidel2D. To test the code, for either case the form used is listed below.
+           
+           for(iters < maxIters)
+           {
+                //iter.gaussSeidel2D();
+                iter.gaussSeidel(ad, as1, al1, as2, al2, b, x, n, n);
+           }
+           //where n and m are equal to give a square matrix.
+
+answers for the 1D Poisson Problem are:
+           
+           1D Answers:
+           
+
+The answers for the 2D Poisson Problem are:
+           
+           2D Answers:
+           
+           
+
+        
 The Software Manual Pages to the methods used are listed below           
-[]()
-[]()
-[]()
+[gaussSeidel]()
+[gaussSeidel2D]()
 
 ## Task 2
 Write a code to solve a linear system of equations using the conjugate gradient method. For a test case, use the matrix for the Poisson equation. Use the methodology discussed in class to test the method. That is, generate a right hand side from a vector of ones in the specification of the linear system.
