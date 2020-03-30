@@ -22,18 +22,31 @@ The code for it is listed in the software manual under gaussSeidel. The 2D solut
 
 answers for the 1D Poisson Problem are:
            
-           1D Answers:
+           Answers for x estimate:
+           
+           Gauss Seidel solution: -1.0101046265112168 
+           Gauss Seidel solution: 1.0000036164102066 
+           Gauss Seidel solution: 2.4999945754000397 
+           Gauss Seidel solution: -1.1666648981441874 
+           Gauss Seidel solution: -0.7352452609336343 
+           Gauss Seidel solution: 0.03693714340241449 
+           Gauss Seidel solution: 0.009069498333371265 
+           Gauss Seidel solution: -0.005965909811283892 
+           Gauss Seidel solution: 0.0 
            
 
 The answers for the 2D Poisson Problem are:
            
            2D Answers:
+           Answers for x and y estimates respectively:
+           
+           
            
            
 
         
 The Software Manual Pages to the methods used are listed below           
-[gaussSeidel]()
+[gaussSeidel]()            
 [gaussSeidel2D]()
 
 ## Task 2
