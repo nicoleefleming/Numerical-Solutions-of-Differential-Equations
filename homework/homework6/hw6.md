@@ -152,12 +152,287 @@ The Software Manual Pages to the methods used are listed below
 ## Task 3
 Solve Δu =∂2u/∂x2 +∂2u/∂y2 = f(x,y) with f(x,y) = xy and homogeneous boundary conditions. Use at least three different mesh sizes, say h = 0.1, h = 0.01, and h = 0.001 for the test.
 ### Response   
+I used the method developed in Task one for this, the gaussSeidel2D. I have put the results for the different mesh sizes below. If the conjugate gradient needs to be used here instead, I will replace the answers when that code is developed.
+
+For h = 0.1
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 1.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 1.0
+       Gauss-Seidel 2D: -0.005000000000000001
+       Gauss-Seidel 2D: -0.020000000000000004
+       Gauss-Seidel 2D: -0.04500000000000001
+       Gauss-Seidel 2D: -0.08000000000000002
+       Gauss-Seidel 2D: -0.12500000000000003
+       Gauss-Seidel 2D: -0.18000000000000005
+       Gauss-Seidel 2D: -0.24500000000000005
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -0.005000000000000001
+       Gauss-Seidel 2D: -0.020000000000000004
+       Gauss-Seidel 2D: -0.04500000000000001
+       Gauss-Seidel 2D: -0.08000000000000002
+       Gauss-Seidel 2D: -0.12500000000000003
+       Gauss-Seidel 2D: -0.18000000000000005
+       Gauss-Seidel 2D: -0.24500000000000005
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -0.005000000000000001
+       Gauss-Seidel 2D: -0.020000000000000004
+       Gauss-Seidel 2D: -0.04500000000000001
+       Gauss-Seidel 2D: -0.08000000000000002
+       Gauss-Seidel 2D: -0.12500000000000003
+       Gauss-Seidel 2D: -0.18000000000000005
+       Gauss-Seidel 2D: -0.24500000000000005
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -0.005000000000000001
+       Gauss-Seidel 2D: -0.020000000000000004
+       Gauss-Seidel 2D: -0.04500000000000001
+       Gauss-Seidel 2D: -0.08000000000000002
+       Gauss-Seidel 2D: -0.12500000000000003
+       Gauss-Seidel 2D: -0.18000000000000005
+       Gauss-Seidel 2D: -0.24500000000000005
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -0.005000000000000001
+       Gauss-Seidel 2D: -0.020000000000000004
+       Gauss-Seidel 2D: -0.04500000000000001
+       Gauss-Seidel 2D: -0.08000000000000002
+       Gauss-Seidel 2D: -0.12500000000000003
+       Gauss-Seidel 2D: -0.18000000000000005
+       Gauss-Seidel 2D: -0.24500000000000005
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -0.005000000000000001
+       Gauss-Seidel 2D: -0.020000000000000004
+       Gauss-Seidel 2D: -0.04500000000000001
+       Gauss-Seidel 2D: -0.08000000000000002
+       Gauss-Seidel 2D: -0.12500000000000003
+       Gauss-Seidel 2D: -0.18000000000000005
+       Gauss-Seidel 2D: -0.24500000000000005
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -0.005000000000000001
+       Gauss-Seidel 2D: -0.020000000000000004
+       Gauss-Seidel 2D: -0.04500000000000001
+       Gauss-Seidel 2D: -0.08000000000000002
+       Gauss-Seidel 2D: -0.12500000000000003
+       Gauss-Seidel 2D: -0.18000000000000005
+       Gauss-Seidel 2D: -0.24500000000000005
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+
+For h = 0.01
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 1.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 1.0
+       Gauss-Seidel 2D: -5.0E-5
+       Gauss-Seidel 2D: -2.0E-4
+       Gauss-Seidel 2D: -4.5000000000000004E-4
+       Gauss-Seidel 2D: -8.0E-4
+       Gauss-Seidel 2D: -0.00125
+       Gauss-Seidel 2D: -0.0018000000000000002
+       Gauss-Seidel 2D: -0.00245
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -5.0E-5
+       Gauss-Seidel 2D: -2.0E-4
+       Gauss-Seidel 2D: -4.5000000000000004E-4
+       Gauss-Seidel 2D: -8.0E-4
+       Gauss-Seidel 2D: -0.00125
+       Gauss-Seidel 2D: -0.0018000000000000002
+       Gauss-Seidel 2D: -0.00245
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -5.0E-5
+       Gauss-Seidel 2D: -2.0E-4
+       Gauss-Seidel 2D: -4.5000000000000004E-4
+       Gauss-Seidel 2D: -8.0E-4
+       Gauss-Seidel 2D: -0.00125
+       Gauss-Seidel 2D: -0.0018000000000000002
+       Gauss-Seidel 2D: -0.00245
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -5.0E-5
+       Gauss-Seidel 2D: -2.0E-4
+       Gauss-Seidel 2D: -4.5000000000000004E-4
+       Gauss-Seidel 2D: -8.0E-4
+       Gauss-Seidel 2D: -0.00125
+       Gauss-Seidel 2D: -0.0018000000000000002
+       Gauss-Seidel 2D: -0.00245
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -5.0E-5
+       Gauss-Seidel 2D: -2.0E-4
+       Gauss-Seidel 2D: -4.5000000000000004E-4
+       Gauss-Seidel 2D: -8.0E-4
+       Gauss-Seidel 2D: -0.00125
+       Gauss-Seidel 2D: -0.0018000000000000002
+       Gauss-Seidel 2D: -0.00245
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -5.0E-5
+       Gauss-Seidel 2D: -2.0E-4
+       Gauss-Seidel 2D: -4.5000000000000004E-4
+       Gauss-Seidel 2D: -8.0E-4
+       Gauss-Seidel 2D: -0.00125
+       Gauss-Seidel 2D: -0.0018000000000000002
+       Gauss-Seidel 2D: -0.00245
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -5.0E-5
+       Gauss-Seidel 2D: -2.0E-4
+       Gauss-Seidel 2D: -4.5000000000000004E-4
+       Gauss-Seidel 2D: -8.0E-4
+       Gauss-Seidel 2D: -0.00125
+       Gauss-Seidel 2D: -0.0018000000000000002
+       Gauss-Seidel 2D: -0.00245
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+
+For h = 0.001
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 1.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 1.0
+       Gauss-Seidel 2D: -5.0E-7
+       Gauss-Seidel 2D: -2.0E-6
+       Gauss-Seidel 2D: -4.5E-6
+       Gauss-Seidel 2D: -8.0E-6
+       Gauss-Seidel 2D: -1.2499999999999999E-5
+       Gauss-Seidel 2D: -1.8E-5
+       Gauss-Seidel 2D: -2.45E-5
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -5.0E-7
+       Gauss-Seidel 2D: -2.0E-6
+       Gauss-Seidel 2D: -4.5E-6
+       Gauss-Seidel 2D: -8.0E-6
+       Gauss-Seidel 2D: -1.2499999999999999E-5
+       Gauss-Seidel 2D: -1.8E-5
+       Gauss-Seidel 2D: -2.45E-5
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -5.0E-7
+       Gauss-Seidel 2D: -2.0E-6
+       Gauss-Seidel 2D: -4.5E-6
+       Gauss-Seidel 2D: -8.0E-6
+       Gauss-Seidel 2D: -1.2499999999999999E-5
+       Gauss-Seidel 2D: -1.8E-5
+       Gauss-Seidel 2D: -2.45E-5
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -5.0E-7
+       Gauss-Seidel 2D: -2.0E-6
+       Gauss-Seidel 2D: -4.5E-6
+       Gauss-Seidel 2D: -8.0E-6
+       Gauss-Seidel 2D: -1.2499999999999999E-5
+       Gauss-Seidel 2D: -1.8E-5
+       Gauss-Seidel 2D: -2.45E-5
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -5.0E-7
+       Gauss-Seidel 2D: -2.0E-6
+       Gauss-Seidel 2D: -4.5E-6
+       Gauss-Seidel 2D: -8.0E-6
+       Gauss-Seidel 2D: -1.2499999999999999E-5
+       Gauss-Seidel 2D: -1.8E-5
+       Gauss-Seidel 2D: -2.45E-5
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -5.0E-7
+       Gauss-Seidel 2D: -2.0E-6
+       Gauss-Seidel 2D: -4.5E-6
+       Gauss-Seidel 2D: -8.0E-6
+       Gauss-Seidel 2D: -1.2499999999999999E-5
+       Gauss-Seidel 2D: -1.8E-5
+       Gauss-Seidel 2D: -2.45E-5
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: -5.0E-7
+       Gauss-Seidel 2D: -2.0E-6
+       Gauss-Seidel 2D: -4.5E-6
+       Gauss-Seidel 2D: -8.0E-6
+       Gauss-Seidel 2D: -1.2499999999999999E-5
+       Gauss-Seidel 2D: -1.8E-5
+       Gauss-Seidel 2D: -2.45E-5
+       Gauss-Seidel 2D: 0.0
+
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
+       Gauss-Seidel 2D: 0.0
 
     
 The links to the Software Manual pages are listed below.        
-[]()
-[]()
-[]()
+[gaussSeidel2D](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/gaussSeidel2D.md)
 
 ## Task 4
 Build routines that will assemble the matrix for a nine point stencil. Also build a code that will create the right hand side for the Poisson equation.
