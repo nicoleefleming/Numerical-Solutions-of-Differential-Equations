@@ -38,16 +38,105 @@ answers for the 1D Poisson Problem are:
 The answers for the 2D Poisson Problem are:
            
            2D Answers:
-           Answers for x and y estimates respectively:
+           For a 9 x 9 matrix the results are as follows in groups by row
+           
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 1.0
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
+
+           Gauss-Seidel 2D: 1.0
+           Gauss-Seidel 2D: -0.0078125
+           Gauss-Seidel 2D: -0.03125
+           Gauss-Seidel 2D: -0.0703125
+           Gauss-Seidel 2D: -0.125
+           Gauss-Seidel 2D: -0.1953125
+           Gauss-Seidel 2D: -0.28125
+           Gauss-Seidel 2D: -0.3828125
+           Gauss-Seidel 2D: 0.0
+
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: -0.0078125
+           Gauss-Seidel 2D: -0.03125
+           Gauss-Seidel 2D: -0.0703125
+           Gauss-Seidel 2D: -0.125
+           Gauss-Seidel 2D: -0.1953125
+           Gauss-Seidel 2D: -0.28125
+           Gauss-Seidel 2D: -0.3828125
+           Gauss-Seidel 2D: 0.0
+
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: -0.0078125
+           Gauss-Seidel 2D: -0.03125
+           Gauss-Seidel 2D: -0.0703125
+           Gauss-Seidel 2D: -0.125
+           Gauss-Seidel 2D: -0.1953125
+           Gauss-Seidel 2D: -0.28125
+           Gauss-Seidel 2D: -0.3828125
+           Gauss-Seidel 2D: 0.0
+
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: -0.0078125
+           Gauss-Seidel 2D: -0.03125
+           Gauss-Seidel 2D: -0.0703125
+           Gauss-Seidel 2D: -0.125
+           Gauss-Seidel 2D: -0.1953125
+           Gauss-Seidel 2D: -0.28125
+           Gauss-Seidel 2D: -0.3828125
+           Gauss-Seidel 2D: 0.0
+
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: -0.0078125
+           Gauss-Seidel 2D: -0.03125
+           Gauss-Seidel 2D: -0.0703125
+           Gauss-Seidel 2D: -0.125
+           Gauss-Seidel 2D: -0.1953125
+           Gauss-Seidel 2D: -0.28125
+           Gauss-Seidel 2D: -0.3828125
+           Gauss-Seidel 2D: 0.0
+
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: -0.0078125
+           Gauss-Seidel 2D: -0.03125
+           Gauss-Seidel 2D: -0.0703125
+           Gauss-Seidel 2D: -0.125
+           Gauss-Seidel 2D: -0.1953125
+           Gauss-Seidel 2D: -0.28125
+           Gauss-Seidel 2D: -0.3828125
+           Gauss-Seidel 2D: 0.0
+
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: -0.0078125
+           Gauss-Seidel 2D: -0.03125
+           Gauss-Seidel 2D: -0.0703125
+           Gauss-Seidel 2D: -0.125
+           Gauss-Seidel 2D: -0.1953125
+           Gauss-Seidel 2D: -0.28125
+           Gauss-Seidel 2D: -0.3828125
+           Gauss-Seidel 2D: 0.0
+
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
+           Gauss-Seidel 2D: 0.0
            
            
-           
-           
+This is going off of the formula given in class (the 1D method) and the code written in the textbook (page 70).
 
         
 The Software Manual Pages to the methods used are listed below           
-[gaussSeidel]()            
-[gaussSeidel2D]()
+[gaussSeidel](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/gaussSeidel.md)            
+[gaussSeidel2D](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/gaussSeidel2D.md)
 
 ## Task 2
 Write a code to solve a linear system of equations using the conjugate gradient method. For a test case, use the matrix for the Poisson equation. Use the methodology discussed in class to test the method. That is, generate a right hand side from a vector of ones in the specification of the linear system.
