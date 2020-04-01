@@ -17,6 +17,8 @@ All the code written for the Math 5620 Course put into their respective class ca
 2.  [RHSpdeInit](https://github.com/nicoleefleming/math5620/tree/master/SoftwareManual/RHSpdeInit.md)
 3.  [jacobi](https://github.com/nicoleefleming/math5620/tree/master/SoftwareManual/jacobi.md)
 4.  [test_convergence](https://github.com/nicoleefleming/math5620/tree/master/SoftwareManual/test_convergence.md)
+5.  [gaussSeidel]()
+6.  [gaussSeidel2D]()
 ### Linear Solvers  
 1.  [DirichletSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/DirichletSolve.md)
 2.  [NeumannSolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/NeumannSolve.md)
