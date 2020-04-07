@@ -1,0 +1,1 @@
+So far all of the code is contained in the source files here. They are not complete, as Task 2, 4, and 5 are still being worked on. The code will be updated and this document edited when the code is as finished as it can be by using the book and notes, and email conversations.
