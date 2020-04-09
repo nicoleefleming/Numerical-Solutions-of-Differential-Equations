@@ -142,12 +142,22 @@ The Software Manual Pages to the methods used are listed below
 Write a code to solve a linear system of equations using the conjugate gradient method. For a test case, use the matrix for the Poisson equation. Use the methodology discussed in class to test the method. That is, generate a right hand side from a vector of ones in the specification of the linear system.
 
 ### Response
-    
+I used the textbook, pages 79 - 87 to try to understand how to go about composing this code. I used the algoritm on page 87 that is specified in the text. The tolerance used was 0.00001. The results were:
+        
+        Conjugant-gradient Solution: 18.0
+        Conjugant-gradient Solution: 0.0
+        Conjugant-gradient Solution: 72.0
+        Conjugant-gradient Solution: 162.0
+        Conjugant-gradient Solution: 288.0
+        Conjugant-gradient Solution: 450.0
+        Conjugant-gradient Solution: 648.0
+        Conjugant-gradient Solution: 882.0
+        Conjugant-gradient Solution: 1152.0
+
+The method that was written and the example that was used to test it are specified in the Software Manual. The x vector was set to all zeros, (this was U in the book), b was set to xy, and A was the Poisson 2D matrix, with 1s on the first sub and super diagonal, and 0s on the main diagonal.
 
 The Software Manual Pages to the methods used are listed below           
-[]()
-[]()
-[]()
+[conjugateGradient](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/conjugateGradient.md)            
 
 ## Task 3
 Solve Δu =∂2u/∂x2 +∂2u/∂y2 = f(x,y) with f(x,y) = xy and homogeneous boundary conditions. Use at least three different mesh sizes, say h = 0.1, h = 0.01, and h = 0.001 for the test.
@@ -441,7 +451,6 @@ Build routines that will assemble the matrix for a nine point stencil. Also buil
 
 
 The links to the Software Manual pages are listed below.        
-[]()
 []()
 []()
 
